@@ -212,9 +212,3 @@ Bryan Moreira
 📚 LinkedIn
 
 💼 Projeto com fins educacionais e práticos para produtividade pessoal.
-
-
----
-
-Posso gerar um arquivo `.zip` com este `README.md` e o `LICENSE` prontos para download direto.  
-Quer que eu gere isso agora?
