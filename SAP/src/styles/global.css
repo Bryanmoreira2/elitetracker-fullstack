@@ -1,0 +1,26 @@
+:root{
+    --balck-blue: #001e2b;
+    --dark-blue: #04141c;
+    --white:#ffffff;
+    --info: #016bf8;
+    --info-hover: #00357b;
+    --ligh: #828282;
+    --error: #db3030;
+    --error-hover: #9d1919;
+    --neutral: #575757
+
+
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family:'Lexend',sans-serif
+}
+
+button {
+    cursor: pointer;
+    border: 0;
+}

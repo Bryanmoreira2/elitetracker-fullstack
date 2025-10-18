@@ -1,0 +1,288 @@
+.container{
+    display: grid;
+    grid-template-columns: 60% 1fr;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--balck-blue);
+    padding: 25px;
+
+}
+.content {
+    padding: 20px;
+    border-right: 1px solid var(--ligh);
+    height:  calc(100% - 40px);
+}
+.input-grup{
+    display: flex;
+    align-items: center ;
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto;
+    gap: 20px
+
+}
+.input{
+    
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--white);
+    border-radius: 4px;
+    height: 36px;
+    padding: 0 10px ;
+    margin-top: 40px;
+
+}
+.input input {
+    height: 36px;
+    width: 100%;
+    font-size: 16px;
+    background-color:  transparent;
+    color:  var(--white);
+    border: none;
+}
+.input input::placeholder{
+    color: var(--ligh);
+}
+.input svg{
+    height: 24px;
+    width: 24px;
+    fill: var(--white);
+    cursor: pointer;
+    transition: 100ms;
+    margin-right: 8px;
+}
+.input svg :hover{
+    fill: var(--info);
+}
+
+.time{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    max-width: 365px;
+    max-height: 365px;
+    height: 100%;
+    width: 100%;
+
+    border: 3px solid var(--white);
+
+    margin: 0 auto;
+    margin-top: 80px;
+    border-radius: 999px;
+}
+.time span{
+    font-size: 48px;
+    font-weight: 600;
+    color: var(--white);
+}
+.time strong{
+    color: var(--white);
+}
+.button-grup{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 180px;
+    margin : 0 auto;
+    gap : 20px;
+    margin-top: 40px;
+    align-items: center;
+}
+.metrics{
+    padding: 20px;
+}
+.metrics h2{
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--white);
+    margin-top: 20px;
+}
+.info-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+    gap: 80px;
+
+    border-bottom: 1px solid var(--ligh);
+
+}
+.calender-contanier{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+.calendarContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.calendar {
+  --mantine-dates-day-size: 60px;
+  font-size: 16px;
+  color: var(--white);
+  background-color: transparent;
+}
+
+/* espaçamento entre dias */
+.calendar :global(.mantine-Calendar-month) {
+  row-gap: 12px;
+  column-gap: 10px;
+}
+
+/* base */
+.dayCell {
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 50%;
+  transition: transform 0.15s ease;
+}
+.calendar :global(.mantine-Calendar-weekday) {
+  color:var(--white); /* muda aqui a cor */
+  font-weight: 600;
+  font-size: 22px;
+}
+/* remove o fundo padrão quando o dia está selecionado */
+.calendar :global(.mantine-Calendar-day[data-selected]) {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* completado */
+.dayCompleted {
+  background-color: var(--info);
+  color: var(--white)
+}
+
+/* padrão */
+.dayDefault {
+  background-color:var(--neutral);
+  color: var(--white)
+}
+
+/* fora do mês */
+.dayInactive {
+  background-color: var(--neutral);
+  color: var(--ligh);
+}
+
+.dayToday {
+  border: 2px solid var(--white);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5); 
+  transform: scale(1.05);
+}
+
+.dayCell:hover {
+  transform: scale(1.08);
+}
+.focustimelinec {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  color: var(--white);
+}
+
+.focusdateheader {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 16px;
+  text-transform: capitalize;
+}
+
+.listwrapper {
+  padding: 8px 0;
+  height: 100px; 
+  overflow-y: auto;
+ scrollbar-gutter: stable both-edges;
+}
+
+.listwrapper::-webkit-scrollbar {
+  width: 6px;
+}
+.listwrapper::-webkit-scrollbar-thumb {
+  background-color: var(--ligh);
+  border-radius: 10px;
+  border: 1px solid
+}
+.listwrapper::-webkit-scrollbar-track {
+  background: var(--neutral)
+}
+
+.listwrapper ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.focusitem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.iconline {
+    color: var(--info);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.iconwrapper {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--info);
+  position: relative;
+}
+
+.vertline {
+  width: 2px;
+  flex: 1;
+  background-color: var(--info);
+  opacity: 0.4;
+  margin-top: 2px;
+}
+
+.focuscontent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.focusitem:last-child .focuscontent {
+  border-bottom: none;
+}
+
+.focustimerange {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--neutral);
+}
+
+.focusduration {
+  color: var(--neutral);
+  font-weight: 400;
+  margin-right: 10px;
+}
+.nodata {
+ display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  color: var(--light);
+  font-size: 14px;
+  opacity: 0.7;
+  margin-top: 8px;
+}

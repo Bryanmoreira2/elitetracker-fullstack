@@ -1,0 +1,186 @@
+
+.container{
+    display: grid;
+    grid-template-columns:60% 1fr;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--balck-blue);
+
+}
+.content {
+    padding: 20px;
+    border-right: 1px solid var(--ligh);
+    height:  calc(100% - 40px);
+}
+
+.input{
+    
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--white);
+    border-radius: 4px;
+    height: 36px;
+    padding: 0 10px ;
+    margin-top: 40px;
+
+}
+.input input {
+    height: 36px;
+    width: 100%;
+    font-size: 16px;
+    background-color:  transparent;
+    color:  var(--white);
+    border: none;
+}
+.input input::placeholder{
+    color: var(--ligh);
+}
+.input svg{
+    height: 24px;
+    width: 24px;
+    fill: var(--white);
+    cursor: pointer;
+    transition: 100ms;
+}
+.input svg :hover{
+    fill: var(--info);
+}
+.habits {
+    margin-top: 40px;
+}
+.habit{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 46px;
+    border-bottom: 1px  solid var(--ligh);
+    transition: background-color 100ms;
+}
+.habit:hover{
+    background-color: var(--info-hover);
+}
+.habit-active{
+    background-color: var(--info-hover);
+}
+.habit p{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    color: var(--white);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.habit div {
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.habit div input {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.habit div svg{
+    width: 20px;
+    height: 20px;
+    fill: var(--white);
+    cursor: pointer;
+    transition: fill 100ms;
+}
+.habit div svg:hover{
+    fill: var(--error)
+}
+.metrics{
+    padding: 20px;
+}
+.metrics h2{
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--white);
+    margin-top: 20px;
+}
+.info-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+    gap: 80px;
+
+    border-bottom: 1px solid var(--ligh);
+
+}
+.calendarContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.calendar {
+  --mantine-dates-day-size: 60px;
+  font-size: 16px;
+  color: white;
+  background-color: transparent;
+}
+
+/* espaçamento entre dias */
+.calendar :global(.mantine-Calendar-month) {
+  row-gap: 12px;
+  column-gap: 10px;
+}
+
+/* base */
+.dayCell {
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 50%;
+  transition: transform 0.15s ease;
+}
+.calendar :global(.mantine-Calendar-weekday) {
+  color:var(--white); /* muda aqui a cor */
+  font-weight: 600;
+  font-size: 22px;
+}
+/* completado */
+.dayCompleted {
+  background-color: var(--info);
+  color: var(--white)
+}
+
+/* padrão */
+.dayDefault {
+  background-color:var(--neutral);
+  color: var(--white)
+}
+
+/* fora do mês */
+.dayInactive {
+  background-color: var(--neutral);
+  color: var(--ligh);
+}
+
+.dayToday {
+  border: 2px solid #ffffff; /* borda branca */
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5); /* brilho suave */
+  transform: scale(1.05);
+}
+
+/* hover opcional */
+.dayCell:hover {
+  transform: scale(1.08);
+}
+
+
+
+
+
+
+
